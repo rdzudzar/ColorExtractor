@@ -7,4 +7,4 @@ cmcrameri >= 1.4
 cmocean >= 2.0
 colorcet >= 3.0.0
 viscm >= 0.9
-PyQt5 == 5.15.2
+PyQt5-Qt == 5.15.2
