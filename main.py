@@ -17,7 +17,7 @@ from page_make_colormaps import page_make_colormaps
 st.set_page_config(page_title='ColorExtractor')
 
 
-image_logo = 'https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Extract2.png'
+image_logo = 'https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/CoEx_logo.png'
 
 
 st.sidebar.markdown("<h1 style='text-align: center; color: grey;'> \
