@@ -105,5 +105,6 @@ If you like Color Extractor, please share it, star repo and feel free to open is
    :alt: MIT License
 
 .. |logo| image:: https://github.com/rdzudzar/ColorExtractor/blob/main/Images/CoEx_logo.png
+   :width: 400
    :target: https://github.com/rdzudzar/DistributionAnalyser
    :alt: DA logo
