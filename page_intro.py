@@ -7,8 +7,6 @@ Created on Tue Feb  8 19:33:00 2022
 
 import streamlit as st
 
-from PIL import Image
-
 def page_intro():
     
     # Space so that 'About' box-text is lower
@@ -48,20 +46,14 @@ def page_intro():
             """)
             
 
-    #image1 = "https://raw.githubusercontent.com/rdzudzar/DistributionAnalyser/main/images/Dist1.png?token=AIAWV2ZQOGWADUFWZM3ZWBLAN3CD6"
-    #image2 = "https://raw.githubusercontent.com/rdzudzar/DistributionAnalyser/main/images/Dist2.png?token=AIAWV27IFN4ZLN3EAONHMVLAN3BNS"
-    #image3 = "https://raw.githubusercontent.com/rdzudzar/DistributionAnalyser/main/images/Dist3.png?token=AIAWV25DCGRPJRFLDPQIWN3AN3BPA"
-    #image4 = "https://raw.githubusercontent.com/rdzudzar/DistributionAnalyser/main/images/Fit1.png?token=AIAWV2ZVPX4HJL77ZQRTIBDAN3BQK"
-    #image5 = "https://raw.githubusercontent.com/rdzudzar/DistributionAnalyser/main/images/Fit2.png?token=AIAWV27QFQIAEOQSRDQVC3DAN3BRQ"
-    #image6 = "https://raw.githubusercontent.com/rdzudzar/DistributionAnalyser/main/images/Fit3.png?token=AIAWV265V2EQ24SLCTLEHOTAN3BSQ"
+    image1 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Extract1.png?token=GHSAT0AAAAAABQNKLPBKHE54SCCRCQMW6WQYQ25G2Q"
+    image2 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Extract2.png?token=GHSAT0AAAAAABQNKLPAKGDDLTIYTE3NPWSMYQ25HDA"
+    image3 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Adjust1.png?token=GHSAT0AAAAAABQNKLPBDUEBOATY3MDMFCLGYQ25FTA"
+    image4 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Adjust2.png?token=GHSAT0AAAAAABQNKLPBZD5DSZ3ADKIHWTZ2YQ25GBQ"
+    image5 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Make1.png?token=GHSAT0AAAAAABQNKLPB6KEZRLAIFAEZUXXIYQ25HOQ"
+    image6 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Make2.png?token=GHSAT0AAAAAABQNKLPA576Z5ICN3F5ZVVUQYQ25HXA"
+    image7 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Make3.png?token=GHSAT0AAAAAABQNKLPAJ4LKYDFJ5WTGI2YAYQ25IAA"
 
-    image1 = Image.open('G:/Rob_Work/02_Project/ColorApp/Images/Extract1.png')
-    image2 = Image.open('G:/Rob_Work/02_Project/ColorApp/Images/Extract2.png')
-    image3 = Image.open('G:/Rob_Work/02_Project/ColorApp/Images/Adjust1.png')
-    image4 = Image.open('G:/Rob_Work/02_Project/ColorApp/Images/Adjust2.png')
-    image5 = Image.open('G:/Rob_Work/02_Project/ColorApp/Images/Make1.png')
-    image6 = Image.open('G:/Rob_Work/02_Project/ColorApp/Images/Make2.png')
-    image7 = Image.open('G:/Rob_Work/02_Project/ColorApp/Images/Make3.png')
 
 
     def make_line():
