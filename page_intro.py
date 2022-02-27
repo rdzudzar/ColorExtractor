@@ -40,8 +40,7 @@ def page_intro():
             """)
             
     st.info("""
-            - Here is a youtube link to the [Color Extractor\
-                walkthrough](https://www.youtube.com/watch?v=6S0b7gFY36I&t=3s).
+            - Here is a youtube link to the Color Extractor walkthrough - Soon!.
             - App snippets and brief descriptions ⮧
             """)
             
