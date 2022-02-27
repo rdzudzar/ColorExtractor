@@ -6,5 +6,4 @@ proplot >= 0.9.5
 cmcrameri >= 1.4
 cmocean >= 2.0
 colorcet >= 3.0.0
-viscm >= 0.9
-QtPy == 1.10.0
+viscm == 0.9
