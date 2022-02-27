@@ -46,13 +46,13 @@ def page_intro():
             """)
             
 
-    image1 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Extract1.png?token=GHSAT0AAAAAABQNKLPBKHE54SCCRCQMW6WQYQ25G2Q"
-    image2 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Extract2.png?token=GHSAT0AAAAAABQNKLPAKGDDLTIYTE3NPWSMYQ25HDA"
-    image3 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Adjust1.png?token=GHSAT0AAAAAABQNKLPBDUEBOATY3MDMFCLGYQ25FTA"
-    image4 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Adjust2.png?token=GHSAT0AAAAAABQNKLPBZD5DSZ3ADKIHWTZ2YQ25GBQ"
-    image5 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Make1.png?token=GHSAT0AAAAAABQNKLPB6KEZRLAIFAEZUXXIYQ25HOQ"
-    image6 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Make2.png?token=GHSAT0AAAAAABQNKLPA576Z5ICN3F5ZVVUQYQ25HXA"
-    image7 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Make3.png?token=GHSAT0AAAAAABQNKLPAJ4LKYDFJ5WTGI2YAYQ25IAA"
+    image1 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Extract1.png"
+    image2 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Extract2.png"
+    image3 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Adjust1.png"
+    image4 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Adjust2.png"
+    image5 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Make1.png"
+    image6 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Make2.png"
+    image7 = "https://raw.githubusercontent.com/rdzudzar/ColorExtractor/main/Images/Make3.png"
 
 
 
