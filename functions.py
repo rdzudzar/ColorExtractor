@@ -12,6 +12,7 @@ from matplotlib import colors
 import numpy as np
 
 # For colormap overview
+import viscm
 from viscm import viscm
 
 # Used colormap packages
