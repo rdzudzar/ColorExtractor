@@ -3,7 +3,7 @@
 Color Extractor
 ===============
 
-|MIT licensed|
+|Streamlit| |MIT licensed|
 
 Color Extractor is a Web App that allows you to extract palettes of colors from various publicly
 available colormaps, as well as from your own created colormaps. 
@@ -13,7 +13,7 @@ Python packages. In adition, you can create an infinite combinations of your own
 
 How to use
 ----------
-Here is a link to YouTube for Color Extractor walkthrough.
+Here is a link to YouTube for Color Extractor walkthrough: https://www.youtube.com/watch?v=77Xx3tIXyqI
 
 
 Main options:
@@ -121,3 +121,7 @@ If you like Color Extractor, please share it, star repo and feel free to open is
    :width: 400
    :target: https://github.com/rdzudzar/DistributionAnalyser
    :alt: DA logo
+   
+.. |Streamlit| image:: https://static.streamlit.io/badges/streamlit_badge_black_white.svg
+   :target: https://share.streamlit.io/rdzudzar/colorextractor/main/main.py
+   :alt: Streamlit App
