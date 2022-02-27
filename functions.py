@@ -12,7 +12,7 @@ from matplotlib import colors
 import numpy as np
 
 # For colormap overview
-from viscm import viscm
+#from viscm import viscm
 
 # Used colormap packages
 import cmasher as cmr
@@ -443,45 +443,45 @@ def pick_hex(cmp_name, origin, cmap_color_span, num_of_swatches):
     return colors_hex
 
 
-def get_me_viscm(origin, cmap_color_span):
-    
-    # Adding optional checkbox if someone wants to see viscim 
-    # overview of the selected colormap             
-    vi = st.checkbox("Evaluate colormap with viscm")
-    
-    if vi:    
-        st.write("Below is evaluation of your colormap with\
-                 [**viscm**](https://github.com/matplotlib/viscm/tree/v0.9).\
-                 Perceptually uniform sequential colormap should appear as\
-                two straight lines on the two upper left (derivative)\
-                plots.")
-        
-        # Check the origin of the colormap, and then parse colormap to the
-        # viscim
-        if origin == 'cmasher':
-            viscm_cmap_range = cmr.get_sub_cmap('cmr.'+f"{st.session_state['button']}", 
-                                 cmap_color_span[0], cmap_color_span[1])
-            viscm(viscm_cmap_range)
-            
-        elif origin == 'cmocean':
-            viscm_cmap_range = cmr.get_sub_cmap('cmo.'+f"{st.session_state['button']}", 
-                                 cmap_color_span[0], cmap_color_span[1])
-            viscm(viscm_cmap_range)
-            
-        elif origin == 'crameri':
-            viscm_cmap_range = cmr.get_sub_cmap('cmc.'+f"{st.session_state['button']}", 
-                                 cmap_color_span[0], cmap_color_span[1])
-            viscm(viscm_cmap_range)
-            
-        else:
-            viscm_cmap_range = cmr.get_sub_cmap(f"{st.session_state['button']}", 
-                                 cmap_color_span[0], cmap_color_span[1])
-            viscm(viscm_cmap_range)
-        
-        # Show viscim overview, selected size is ok
-        fig = plt.gcf()
-        fig.set_size_inches(12, 7)
-        st.pyplot(fig)
+#def get_me_viscm(origin, cmap_color_span):
+#    
+#    # Adding optional checkbox if someone wants to see viscim 
+#    # overview of the selected colormap             
+#    vi = st.checkbox("Evaluate colormap with viscm")
+#    
+#    if vi:    
+#        st.write("Below is evaluation of your colormap with\
+#                 [**viscm**](https://github.com/matplotlib/viscm/tree/v0.9).\
+#                 Perceptually uniform sequential colormap should appear as\
+#                two straight lines on the two upper left (derivative)\
+#                plots.")
+#        
+#        # Check the origin of the colormap, and then parse colormap to the
+#        # viscim
+#        if origin == 'cmasher':
+#            viscm_cmap_range = cmr.get_sub_cmap('cmr.'+f"{st.session_state['button']}", 
+#                                 cmap_color_span[0], cmap_color_span[1])
+#            viscm(viscm_cmap_range)
+#            
+#        elif origin == 'cmocean':
+#            viscm_cmap_range = cmr.get_sub_cmap('cmo.'+f"{st.session_state['button']}", 
+#                                 cmap_color_span[0], cmap_color_span[1])
+#            viscm(viscm_cmap_range)
+#            
+#        elif origin == 'crameri':
+#            viscm_cmap_range = cmr.get_sub_cmap('cmc.'+f"{st.session_state['button']}", 
+#                                 cmap_color_span[0], cmap_color_span[1])
+#            viscm(viscm_cmap_range)
+#            
+#        else:
+#            viscm_cmap_range = cmr.get_sub_cmap(f"{st.session_state['button']}", 
+#                                 cmap_color_span[0], cmap_color_span[1])
+#            viscm(viscm_cmap_range)
+#        
+#        # Show viscim overview, selected size is ok
+#        fig = plt.gcf()
+#        fig.set_size_inches(12, 7)
+#        st.pyplot(fig)
 
 def get_hex(origin, cmp_name, buttons, cmap_color_span, num_of_swatches):
     """
@@ -538,7 +538,7 @@ def get_hex(origin, cmp_name, buttons, cmap_color_span, num_of_swatches):
         st.write(f"{num_of_swatches} hex colors from selected\
                   {st.session_state['button']} colormap are:", hexes)        
         
-        get_me_viscm(origin, cmap_color_span)
+        #get_me_viscm(origin, cmap_color_span)
         
     except KeyError:
         st.write("")

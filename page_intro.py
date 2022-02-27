@@ -90,7 +90,7 @@ def page_intro():
                 Scroll to the bottom of the page, your colors will appear.
                 - A - Name your palette and download Procreate .swatches file.
                 - B - Copy HEX colors to clipboard.
-                - C - Examine quality of the colormap with viscm.
+                - C - Examine quality of the colormap with viscm. (NA)
                 """)
     
     make_line()
@@ -166,7 +166,7 @@ def page_intro():
                 - B - Name your Python script, press enter and click\
                         on the button to download .py file.
                 - C - Click on checkbox if you want to examine quality of your\
-                    colormap with viscm.
+                    colormap with viscm. (NA)
                 """)
                 
     make_line()
