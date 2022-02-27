@@ -1,6 +1,6 @@
 |logo|
 
-Color Extractpr 
+Color Extractor
 ===============
 
 |MIT licensed|
