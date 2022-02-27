@@ -14,7 +14,7 @@ import numpy as np
 import cmasher as cmr
 from colorspacious import cspace_converter
 
-from viscm import viscm
+#from viscm import viscm
 import time
 
 from functions import make_procreate_swatches
@@ -203,27 +203,27 @@ def page_make_colormaps():
         ax.tick_params(which='both', axis="y",direction="in")
 
 
-    def see_viscm(cmap):
-        """
-        Function that takes created colormap and puts it into viscim package,
-        to give colormap quality overview.
-
-        Parameters
-        ----------
-        cmap : String. Cmap.
-            Needs to be colormap name.
-
-        Returns
-        -------
-        None.
-        Function is pased to streamlit.pyplot
-
-        """
-        
-        #Evaluate goodness of colormap using viscmm
-        viscm(cmap)
-        fig = plt.gcf()
-        fig.set_size_inches(12, 7)
+#    def see_viscm(cmap):
+#        """
+#        Function that takes created colormap and puts it into viscim package,
+#        to give colormap quality overview.
+#
+#        Parameters
+#        ----------
+#        cmap : String. Cmap.
+#            Needs to be colormap name.
+#
+#        Returns
+#        -------
+#        None.
+#        Function is pased to streamlit.pyplot
+#
+#        """
+#        
+#        #Evaluate goodness of colormap using viscmm
+#        viscm(cmap)
+#        fig = plt.gcf()
+#        fig.set_size_inches(12, 7)
 
 
     def get_code(name_procreate):
@@ -411,13 +411,13 @@ plt.show()
         py_file_downloader(f"{get_code(name_procreate)}", name_procreate)
     
         # Show lightness graph and viscm output
-        light = st.checkbox("Check evaluation of your colormap with viscm and see its lightness curve.")
+        light = st.checkbox("Check lightness curve.")
         if light:
             
-            st.write("Below is evaluation of your colormap with [**viscm**](https://github.com/matplotlib/viscm/tree/v0.9).\
-                     Perceptually uniform sequential colormap should appear as \
-                         two straight lines on the two upper left (derivative) plots.")
-            st.pyplot(see_viscm('mycmap'))
+            #st.write("Below is evaluation of your colormap with [**viscm**](https://github.com/matplotlib/viscm/tree/v0.9).\
+            #         Perceptually uniform sequential colormap should appear as \
+            #             two straight lines on the two upper left (derivative) plots.")
+            #st.pyplot(see_viscm('mycmap'))
     
             st.write("For sequential colormaps, the lightness value increases/decreases\
              monotonically, [**Read More**](https://matplotlib.org/stable/tutorials/colors/colormaps.html).")
