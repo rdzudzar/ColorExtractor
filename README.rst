@@ -72,7 +72,6 @@ Code is written in Python 3.9.7, below are the packages which are used in the co
 - ``streamlit >= 1.5.0``
 - ``matplotlib >= 3.4.3``
 - ``numpy >= 1.20.3``
-- ``json >= 2.0.9``
 - ``cmasher >= 1.6.3``
 - ``proplot >= 0.9.5``
 - ``cmcrameri >= 1.4``
