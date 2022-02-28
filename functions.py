@@ -176,9 +176,13 @@ def get_cmaps_from_origin(origin):
 
 # Will cache matplotlib and make it load much faster
 # https://github.com/streamlit/streamlit/issues/3100
-@st.cache(hash_funcs={matplotlib.figure.Figure: hash}, 
-          allow_output_mutation=True,
-          suppress_st_warning=True)
+#@st.cache(hash_funcs={matplotlib.figure.Figure: hash}, 
+#          allow_output_mutation=True,
+#          suppress_st_warning=True)
+
+@st.cache(hash_funcs={matplotlib.figure.Figure: lambda _: None},
+                    allow_output_mutation=True,
+                    suppress_st_warning=True)
 def colormap_figure(colormap, origin, cmap_color_span, num_of_swatches):
     """
     Get the origin of the colormap and greate a plot of colormap, using
