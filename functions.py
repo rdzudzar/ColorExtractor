@@ -24,6 +24,7 @@ import colorcet as cc
 # For Procreate swatches
 import json
 import zipfile
+import io
 
 
 
@@ -632,18 +633,20 @@ def make_procreate_swatches(sw_hex):
         # Procreate data: data storred in Swatches.json, 
         # which is zipped but zip is .swatches
         # File/Swathes name will be obtained from input
-    
-        with zipfile.ZipFile(f"{name_procreate}.swatches", 'w') as zip:
-            zip.writestr("Swatches.json", jsonString)
-        
-        # Streamlit's download button
-        with open(f"{name_procreate}.swatches", "rb") as fp:
+        with io.BytesIO() as buffer: 
+            with zipfile.ZipFile(buffer, 'w') as zip:
+                zip.writestr("Swatches.json", jsonString)
+            
+            buffer.seek(0)
+            
+            # Streamlit's download button
+            #with open(f"{name_procreate}.swatches", "rb") as fp:
             st.sidebar.download_button(
-                label="Download .swatches",
-                data=fp,
-                file_name=f"{name_procreate}.swatches",
-                mime="application/octet-stream"
-                )
+                    label="Download .swatches",
+                    data=buffer,
+                    file_name=f"{name_procreate}.swatches",
+                    mime="application/octet-stream"
+                    )
         st.sidebar.write("")
         st.sidebar.write("")
 
