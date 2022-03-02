@@ -182,9 +182,9 @@ def get_cmaps_from_origin(origin):
 
 # adding time to live - ttl: cache objects will be removed after 5hours
 # testing whether this will save app from reaching resource limits
-@st.cache(hash_funcs={matplotlib.figure.Figure: lambda _: None},
-                    allow_output_mutation=True,
-                    suppress_st_warning=True, ttl=5*3600)
+#@st.cache(hash_funcs={matplotlib.figure.Figure: lambda _: None},
+#                    allow_output_mutation=True,
+#                    suppress_st_warning=True, ttl=5*3600)
 def colormap_figure(colormap, origin, cmap_color_span, num_of_swatches):
     """
     Get the origin of the colormap and greate a plot of colormap, using
