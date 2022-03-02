@@ -170,7 +170,7 @@ def page_make_colormaps():
         return colors_hex    
     
     
-    def check_lightness_curve():
+    def check_lightness_curve(created_cmap):
         """
         Function that takes created colormap and shows its lightness curve.
         Obtained from: https://matplotlib.org/stable/tutorials/colors/colormaps.html
@@ -183,21 +183,21 @@ def page_make_colormaps():
         """
         
         # Made colormap will be registered as mycmap
-        colormap = 'mycmap'
+        colormap = created_cmap
         # Indices to step through colormap
         x = np.linspace(0.0, 1.0, 256)
         
         fig, ax = plt.subplots(figsize=(4, 4))
         # Get RGB values for colormap and convert the colormap in
         # CAM02-UCS colorspace.  lab[0, :, 0] is the lightness.
-        rgb = cm.get_cmap(f"{colormap}")(x)[np.newaxis, :, :3]
+        rgb = cm.get_cmap(created_cmap)(x)[np.newaxis, :, :3]
         lab = cspace_converter("sRGB1", "CAM02-UCS")(rgb)
         
         # So reverse the order so that color start with low lightness
         y_ = lab[0, ::-1, 0]
         c_ = x[::-1]
 
-        ax.scatter(x, y_, c=c_, cmap=f"{colormap}", s=300, linewidths=0.0)
+        ax.scatter(x, y_, c=c_, cmap=created_cmap, s=300, linewidths=0.0)
         ax.set_ylabel('Lightness $L^*$', fontsize=12)
         ax.tick_params(which='both', axis="x",direction="in")
         ax.tick_params(which='both', axis="y",direction="in")
@@ -392,7 +392,7 @@ plt.show()
         c_hex = [c1, c2, c3, c4] 
     
     # There will be User warning that this cmap is already registered, it's ok
-    plt.register_cmap("mycmap", created_cmap)
+    #plt.register_cmap("mycmap", created_cmap)
     st.pyplot(colormap_figure(created_cmap))
         
     
@@ -426,7 +426,7 @@ plt.show()
             
             with one:
                 
-                st.pyplot(check_lightness_curve())
+                st.pyplot(check_lightness_curve(created_cmap))
     
     # Show extracted #hex colors and swatches graph
     cr = st.checkbox("Extract colors from my colormap")
@@ -438,17 +438,17 @@ plt.show()
                  If you want to test them for color blindness,\
                      you can save your image and import it into [**Coblis**](http://www.color-blindness.com/coblis-color-blindness-simulator/).')
             
-        st.pyplot(swatcheslike("mycmap"))
+        st.pyplot(swatcheslike(created_cmap))
         st.info("Download this as a Procreate swatches file - on the left sidebar.")
         st.write("You can copy HEX colors to clipboard (hover over the list) \
                  and adjust them on the 'Adjust Extracted Colors' page;\
                  or download palette as a Procreate .swatches file - see sidebar.")
-        st.write(pick_hex("mycmap"))
+        st.write(pick_hex(created_cmap))
         
         st.sidebar.write("")
         st.sidebar.write("")
         # Make procreate swatches file
-        make_procreate_swatches(pick_hex("mycmap"))
+        make_procreate_swatches(pick_hex(created_cmap))
 
 
 
