@@ -6,6 +6,7 @@ Created on Fri Feb 18 21:06:31 2022
 """
 
 import streamlit as st
+import re
 
 from functions import make_procreate_swatches
 
@@ -64,69 +65,78 @@ def page_adjust_colors():
     
             in_hex.append(b)
     
-            # We have 3x10 columns, place hex codes into swatches
-            # Label will contain number and hex code, this is useful in order
-            # to avoid the same streamlit labels when hex codes are the same
-            if (i==0 or i==10 or i==20) :
-                with one:
-                    # Adding +1 so it starts from 1, as py starts from 0
-                    c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
-                    sw_hex.append(c)
-                    st.write(c)
-
-            elif (i==1 or i==11 or i==21):
-                with two:
-                    c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
-                    sw_hex.append(c)
-                    st.write(c)
-
-            elif (i==2 or i==12 or i==22):
-                with three:
-                    c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
-                    sw_hex.append(c)
-                    st.write(c)
-
-            elif (i==3 or i==13 or i==23):
-                with four:
-                    c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
-                    sw_hex.append(c)
-                    st.write(c)
-
-            elif (i==4 or i==14 or i==24):
-                with five:
-                    c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
-                    sw_hex.append(c)
-                    st.write(c)
-
-            elif (i==5 or i==15 or i==25):
-                with six:
-                    c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
-                    sw_hex.append(c)
-                    st.write(c)
-
-            elif (i==6 or i==16 or i==26):
-                with seven:
-                    c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
-                    sw_hex.append(c)
-                    st.write(c)
- 
-            elif (i==7 or i==17 or i==27):
-                with eight:
-                    c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
-                    sw_hex.append(c)
-                    st.write(c)
-
-            elif (i==8 or i==18 or i==28):
-                with nine:
-                    c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
-                    sw_hex.append(c)
-                    st.write(c)
-
-            elif (i==9 or i==19 or i==29):
-                with ten:
-                    c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
-                    sw_hex.append(c)                    
-                    st.write(c)
+            # Check if HEX is a valid input
+            check_hex = re.search(r'^#(?:[0-9a-fA-F]{3}){1,2}$', b)
+            
+            # If HEX is not a valid, report which one is not valid
+            if check_hex == None:
+                st.error(f"Your input: {b} is not a valid HEX color.")
+            # Otherwise proceed with pickers
+            else:
+                
+                # We have 3x10 columns, place hex codes into swatches
+                # Label will contain number and hex code, this is useful in order
+                # to avoid the same streamlit labels when hex codes are the same
+                if (i==0 or i==10 or i==20) :
+                    with one:
+                        # Adding +1 so it starts from 1, as py starts from 0
+                        c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
+                        sw_hex.append(c)
+                        st.write(c)
+    
+                elif (i==1 or i==11 or i==21):
+                    with two:
+                        c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
+                        sw_hex.append(c)
+                        st.write(c)
+    
+                elif (i==2 or i==12 or i==22):
+                    with three:
+                        c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
+                        sw_hex.append(c)
+                        st.write(c)
+    
+                elif (i==3 or i==13 or i==23):
+                    with four:
+                        c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
+                        sw_hex.append(c)
+                        st.write(c)
+    
+                elif (i==4 or i==14 or i==24):
+                    with five:
+                        c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
+                        sw_hex.append(c)
+                        st.write(c)
+    
+                elif (i==5 or i==15 or i==25):
+                    with six:
+                        c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
+                        sw_hex.append(c)
+                        st.write(c)
+    
+                elif (i==6 or i==16 or i==26):
+                    with seven:
+                        c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
+                        sw_hex.append(c)
+                        st.write(c)
+     
+                elif (i==7 or i==17 or i==27):
+                    with eight:
+                        c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
+                        sw_hex.append(c)
+                        st.write(c)
+    
+                elif (i==8 or i==18 or i==28):
+                    with nine:
+                        c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
+                        sw_hex.append(c)
+                        st.write(c)
+    
+                elif (i==9 or i==19 or i==29):
+                    with ten:
+                        c = st.color_picker(f'{i+1}:', f'{in_hex[i]}')
+                        sw_hex.append(c)                    
+                        st.write(c)
         
         st.write("")
         st.write("")
