@@ -139,12 +139,17 @@ def page_adjust_colors():
         make_procreate_swatches(sw_hex)
     
     if go:
-        st.write("")
-        st.write("")
-        st.write("Click on individual color picker to interactively change its\
+        # To prevend the error when there is no input provided.
+        if input_hex != '':
+            
+            st.write("")
+            st.write("")
+            st.write("Click on individual color picker to interactively change its\
                  color. A list of your updated HEX colors will appear below.")
                      
-        create_swatches()
+            create_swatches()
+        else:
+            st.write("Please enter a comma separated HEX colors first.")
 
         
     st.sidebar.write("")
