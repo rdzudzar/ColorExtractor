@@ -76,7 +76,7 @@ Code is written in Python 3.9.7, below are the packages which are used in the co
 - ``cmcrameri >= 1.4``
 - ``cmocean >= 2.0``
 - ``colorcet >= 3.0.0``
-
+- ``arm_pyart >= 1.13.2``
 
 Structure
 ---------
@@ -97,6 +97,7 @@ Structure
    ├── page_colorcet.py         # Colorcet page container
    ├── page_crameri.py          # Crameri page container
    ├── page_matplotlib.py       # Matplotlib page container
+   ├── page_pyart.py            # Py-ART page container
    ├── page_svivis.py           # SciVisColor page container
 
    ├── README.rst
