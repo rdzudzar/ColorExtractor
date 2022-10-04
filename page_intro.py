@@ -25,7 +25,7 @@ def page_intro():
     st.markdown("<h1 style='text-align: center;'> Color Extractor</h1>", 
                 unsafe_allow_html=True)
     
-    st.markdown("At the moment **Color Extractor** contains **253** imported\
+    st.markdown("At the moment **Color Extractor** contains **281** imported\
                 colormaps from 6 different Python packages.\
                 In adition, you can create an infinite combinations of your \
                 own colormaps.")

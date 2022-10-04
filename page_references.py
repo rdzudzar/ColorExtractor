@@ -16,7 +16,7 @@ def page_references():
 
     st.write(""" **Color Extractor** uses a sample of publicly available python
              packages that contain, or are made for, colormaps. At the moment
-             Color Extractor contains 253 imported colormaps.""")   
+             Color Extractor contains 281 imported colormaps.""")   
              
              
     st.markdown("<h3 style='text-align: left;'> CMasher colormaps</h3>", 
@@ -59,6 +59,12 @@ def page_references():
     st.markdown("""[**Matplotlib**](https://matplotlib.org/) is a comprehensive library for creating static, animated, and interactive visualizations in Python.\
                 Matplotlib has a number of built-in colormaps, you can read more [**here.**](https://matplotlib.org/stable/tutorials/colors/colormaps.html) """)
     
+    st.markdown("<h3 style='text-align: left;'> Py-ART colormaps</h3>", 
+                unsafe_allow_html=True)
+    
+    st.markdown("""[**Py-ART**](https://arm-doe.github.io/pyart/index.html) is The Python ARM Radar Toolkit, Py-ART, is a Python module containing a collection of weather radar algorithms and utilities [**Helmus, J.J. & Collis, S.M., (2016)**](https://openresearchsoftware.metajnl.com/article/10.5334/jors.119/). """)
+    st.markdown("""Color Extractor uses a subset of Py-ART colormaps; full list can be found on [**Py-ART colormap page.**](https://arm-doe.github.io/pyart/examples/plotting/plot_choose_a_colormap.html#sphx-glr-examples-plotting-plot-choose-a-colormap-py)""")
+
     st.markdown("<h3 style='text-align: left;'> SciVisColor colormaps</h3>", 
                 unsafe_allow_html=True)
     

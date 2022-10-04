@@ -21,6 +21,8 @@ import cmcrameri as cmc
 import cmocean as cmo
 import colorcet as cc
 
+from pyart.testing import get_test_data
+
 # For Procreate swatches
 import json
 import zipfile
@@ -123,6 +125,16 @@ def get_cmaps_from_origin(origin):
                           'oranges4', 'browns1', 'browns2', 'browns3', 
                           'browns4', 'browns5', 'browns6', 'browns7', 
                           'browns8', 'browns9']
+
+    elif origin == "pyart":
+        
+        colormap_names = ['LangRainbow12', 'HomeyerRainbow', "BuDOr18",  
+                            "BuOr10", "BuOr12", "BuOr8", "BuDOr12", "BuDRd12","BuDRd18","BuOrR14",
+                            "RdYlBu11b", 'balance',"Bu10", "Bu7",
+                            "Gray5", "Gray9", "SymGray12", "BuGy8", "BlueBrown11", "BrBu10", "BrBu12",
+                             "BuGr14", "GrMg16","Carbone11", "Carbone17",
+                             "RRate11","StepSeq25","Theodore16"]
+
         
     elif origin == "colorcet":        
         colormap_names = ['cet_CET_D10',
@@ -229,6 +241,10 @@ def colormap_figure(colormap, origin, cmap_color_span, num_of_swatches):
         
     elif origin == 'crameri':
         cmap_range = cmr.get_sub_cmap('cmc.'+f"{colormap}", 
+                             cmap_color_span[0], cmap_color_span[1])
+
+    elif origin == 'pyart':
+        cmap_range = cmr.get_sub_cmap('pyart_'+f"{colormap}", 
                              cmap_color_span[0], cmap_color_span[1])
         
     else:
@@ -383,7 +399,10 @@ def swatcheslike(cmp_name, origin, cmap_color_span, num_of_swatches):
     elif origin == 'crameri':
         cmap_range = cmr.get_sub_cmap('cmc.'+f"{cmp_name}", 
                              cmap_color_span[0], cmap_color_span[1])        
-    
+    elif origin == 'pyart':
+        cmap_range = cmr.get_sub_cmap('pyart_'+f"{cmp_name}", 
+                             cmap_color_span[0], cmap_color_span[1])  
+
     else:
         cmap_range = cmr.get_sub_cmap(f"{cmp_name}", 
                              cmap_color_span[0], cmap_color_span[1])   
@@ -443,6 +462,12 @@ def pick_hex(cmp_name, origin, cmap_color_span, num_of_swatches):
                                   cmap_range=(cmap_color_span[0], 
                                               cmap_color_span[1]),
                                   return_fmt='hex')
+    elif origin == 'pyart':
+        colors_hex = cmr.take_cmap_colors('pyart_'+f"{cmp_name}", num_of_swatches, 
+                                  cmap_range=(cmap_color_span[0], 
+                                              cmap_color_span[1]),
+                                  return_fmt='hex')
+
     else:
         colors_hex = cmr.take_cmap_colors(f"{cmp_name}", num_of_swatches, 
                                   cmap_range=(cmap_color_span[0], 

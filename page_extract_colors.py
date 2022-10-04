@@ -15,6 +15,7 @@ from page_cmocean import page_cmocean
 from page_scivis import page_scivis
 from page_colorcet import page_colorcet
 from page_references import page_references
+from page_pyart import page_pyart
 
 def page_extract_colors():
     
@@ -31,6 +32,7 @@ def page_extract_colors():
         "Colorcet colormaps": page_colorcet,
         "Crameri colormaps": page_crameri, 
         "Matplotlib colormaps": page_matplotlib,
+        "Py-ART colormaps": page_pyart,
         "SciVisColor colormaps": page_scivis,
         "References": page_references
         }
