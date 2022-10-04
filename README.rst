@@ -8,7 +8,7 @@ Color Extractor
 Color Extractor is a Web App that allows you to extract palettes of colors from various publicly
 available colormaps, as well as from your own created colormaps. 
 
-At the moment Color Extractor contains 253 imported colormaps from 6 different 
+At the moment Color Extractor contains 281 imported colormaps from 6 different 
 Python packages. In adition, you can create an infinite combinations of your own colormaps.
 
 How to use
