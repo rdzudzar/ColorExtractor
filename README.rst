@@ -124,5 +124,5 @@ If you like Color Extractor, please share it, star repo and feel free to open is
    :alt: DA logo
    
 .. |Streamlit| image:: https://static.streamlit.io/badges/streamlit_badge_black_white.svg
-   :target: https://share.streamlit.io/rdzudzar/colorextractor/main/main.py
+   :target: https://color-extractor.streamlitapp.com
    :alt: Streamlit App
