@@ -63,8 +63,7 @@ def main():
     st.sidebar.header("About")
     st.sidebar.warning(
             """
-            Color Extractor app is created and maintained by astrophysicist
-            **Dr Robert Dzudzar**, currently Executive Data Scientist at [**Tribalism**](https://www.tribalism.com.au/?utm_source=WebApp&utm_medium=ColorExtractor). 
+            Color Extractor app is created and maintained by **Dr Robert Dzudzar**. 
             If you like this app please star its
             [**GitHub**](https://github.com/rdzudzar/ColorExtractor)
             repo, share it and feel free to open an issue if you find a bug 
