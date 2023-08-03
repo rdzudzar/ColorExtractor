@@ -6,4 +6,4 @@ proplot >= 0.9.5
 cmcrameri >= 1.4
 cmocean >= 2.0
 colorcet >= 3.0.0
-arm_pyart >= 1.13.2
+arm_pyart == 1.13.2
