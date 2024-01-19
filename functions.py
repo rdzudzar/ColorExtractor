@@ -16,7 +16,7 @@ import numpy as np
 
 # Used colormap packages
 import cmasher as cmr
-import proplot as plot
+#import proplot as plot
 import cmcrameri as cmc
 import cmocean as cmo
 import colorcet as cc
@@ -33,7 +33,7 @@ import io
 # Ignore worning for many openned plots
 plt.rcParams.update({'figure.max_open_warning': 0})
 
-@st.cache()
+@st.cache_data()
 def get_cmaps_from_origin(origin):
     """
     Making of lists of colormaps from individual packages in order to sort
@@ -196,9 +196,9 @@ def get_cmaps_from_origin(origin):
 
 # Will cache matplotlib and make it load much faster
 # https://github.com/streamlit/streamlit/issues/3100
-@st.cache(hash_funcs={matplotlib.figure.Figure: hash}, 
-          allow_output_mutation=True,
-          suppress_st_warning=True, ttl=3600)
+@st.cache_data(
+          
+         ttl=3600)
 def colormap_figure(colormap, origin, cmap_color_span, num_of_swatches):
     """
     Get the origin of the colormap and greate a plot of colormap, using
