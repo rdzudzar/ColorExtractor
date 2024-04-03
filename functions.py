@@ -546,8 +546,8 @@ def get_hex(origin, cmp_name, buttons, cmap_color_span, num_of_swatches):
     # it was clicked when changing colormap range or number of extracted
     # colors.
     if 'button' not in st.session_state:
-        st.stop()
-        #st.session_state['button'] = 'No'
+        #st.stop()
+        st.session_state['button'] = 'No'
     
     for i, but in enumerate(buttons):
         if buttons[i]:
