@@ -16,7 +16,7 @@ import numpy as np
 
 # Used colormap packages
 import cmasher as cmr
-#import proplot as plot
+import proplot as plot
 import cmcrameri as cmc
 import cmocean as cmo
 import colorcet as cc
@@ -114,7 +114,7 @@ def get_cmaps_from_origin(origin):
         
         
     elif origin == "scivis":
-        
+
         # Imported via proplot
         colormap_names = ['blues1', 'blues2', 'blues3', 'blues4', 'blues5', 
                           'blues6', 'blues7', 'blues8', 'blues9', 'purples1', 
