@@ -250,7 +250,7 @@ def colormap_figure(colormap, origin, cmap_color_span, num_of_swatches):
                              cmap_color_span[0], cmap_color_span[1])
         
     # Figure hight will be similar to the hight of the button
-    fig, ax = plt.subplots(figsize=(7,1.32)) 
+    fig, ax = plt.subplots(figsize=(7,1.44)) 
 
     # Getting only 50 values here so that colormaps are loading faster
     x = np.linspace(0, 1, 50)[None, :]
