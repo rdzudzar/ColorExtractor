@@ -12,6 +12,7 @@ from page_extract_colors import page_extract_colors
 from page_adjust_colors import page_adjust_colors
 from page_make_colormaps import page_make_colormaps
 
+#from page_extract_from_image import page_extract_from_image
 
 # Set the default elements on the sidebar
 st.set_page_config(page_title='ColorExtractor')
@@ -38,6 +39,7 @@ def main():
         "Introduction": page_intro,
         "Extract colors from colormaps": page_extract_colors,
         "Make your own colormap": page_make_colormaps,
+    #    "Extract from an image": page_extract_from_image,
         "Adjust extracted colors": page_adjust_colors,
 
     }

@@ -6,3 +6,4 @@ proplot == 0.9.7
 cmcrameri >= 1.4
 cmocean >= 2.0
 colorcet >= 3.0.0
+plotly >= 5.9.0
