@@ -29,6 +29,10 @@ import zipfile
 import io
 
 import plotly.graph_objects as go
+    
+# To be able to call figure in st.pyplot()
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 
 # Ignore worning for many openned plots
 plt.rcParams.update({'figure.max_open_warning': 0})
@@ -221,10 +225,6 @@ def colormap_figure(colormap, origin, cmap_color_span, num_of_swatches):
     Will be parsed to streamlit pyplot to show figure.
 
     """
-    
-    
-    # To be able to call figure in st.pyplot()
-    st.set_option('deprecation.showPyplotGlobalUse', False)
    
 
     # Checking which package colormap belogns to, as their name is called with
