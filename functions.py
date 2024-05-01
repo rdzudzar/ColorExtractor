@@ -28,7 +28,7 @@ import json
 import zipfile
 import io
 
-
+import plotly.graph_objects as go
 
 # Ignore worning for many openned plots
 plt.rcParams.update({'figure.max_open_warning': 0})
@@ -418,6 +418,65 @@ def swatcheslike(cmp_name, origin, cmap_color_span, num_of_swatches):
     
     fig.tight_layout()
     
+def swatcheslike_plotly(colors):
+    """
+    This function will show a swatches-like graph with colored squares using Plotly.
+
+    Parameters
+    ----------
+    colors : List of strings
+        Hexadecimal color codes.
+
+    Returns
+    -------
+    None.
+    """
+
+    #colors.sort()          # Sort the colors to ensure consistent order
+    colors = colors#[::-1]  # Reverse the colors
+    
+    # Determine the number of colors
+    swatches_number = len(colors)
+
+
+    # Determine the number of rows and columns for the grid
+    m, n = 3, 10
+
+    fig = go.Figure()
+
+    # Specify the positions of the colored squares
+    for i, color in enumerate(colors):
+        row = i // 10  # Determine the row
+        col = i % 10   # Determine the column
+        # Calculate the coordinates for the rectangle
+
+        x = [col * (1 / n), (col + 1) * (1 / n), (col + 1) * (1 / n), col * (1 / n), col * (1 / n)]
+        y = [1 - (row + 1) * (1 / m), 1 - (row + 1) * (1 / m), 1 - row * (1 / m), 1 - row * (1 / m), 1 - (row + 1) * (1 / m)]
+        fig.add_trace(go.Scatter(
+            x=x,
+            y=y,
+            mode='lines',
+            line=dict(color='black', width=4),
+            fill='toself',
+            fillcolor=color,
+            name=color,
+            hoverinfo='text',  # Display hover info
+            hovertext=f'Hex: {color}',  # Hover text with hexadecimal color code
+            showlegend=False
+        ))
+
+    # Update layout
+    fig.update_layout(
+        width=700,
+        height=200,
+        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False, range=[0, 1]),
+        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False, range=[0, 1]),
+        margin=dict(l=0, r=0, t=0, b=0)
+    )
+
+    st.plotly_chart(fig)#, use_column_width=True)
+
+
     
 def pick_hex(cmp_name, origin, cmap_color_span, num_of_swatches):
     """
@@ -558,11 +617,14 @@ def get_hex(origin, cmp_name, buttons, cmap_color_span, num_of_swatches):
     try:
         # Parse to streamlit to write and plot selected colormap
         st.write(f"{st.session_state['button']} colormap was selected.")
-        st.pyplot(swatcheslike(f"{st.session_state['button']}", origin, 
-                               cmap_color_span, num_of_swatches))
-    
+        #st.pyplot(swatcheslike(f"{st.session_state['button']}", origin, 
+        #                       cmap_color_span, num_of_swatches))
+
         hexes = pick_hex(f"{st.session_state['button']}", origin, 
                          cmap_color_span, num_of_swatches)
+
+        swatcheslike_plotly(hexes)
+
         st.info("**Download** patelette as a Procreate .swatches file - on the left sidebar.")
         st.write("You can copy HEX colors to clipboard (hover over the list) \
                  and adjust them on the 'Adjust Extracted Colors' page;\
