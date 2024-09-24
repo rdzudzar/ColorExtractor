@@ -63,7 +63,7 @@ def get_cmaps_from_origin(origin):
         
         # Currated list of colormaps from origin
         colormap_names = ['flamingo','ember','sunburst',
-                        'amber', 'fall', 'pepper','apple', 'heat', 'torch', 
+                        'amber', 'fall', 'pepper','apple', 'torch', 
                         'bubblegum','gothic','amethyst','voltage','gem', 
                         'cosmic','freeze', 'arctic','sapphire', 'ocean', 
                         'horizon', 'lavender','rainforest', 'swamp','toxic', 
