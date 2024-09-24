@@ -21,7 +21,7 @@ from functions import make_procreate_swatches
 import plotly.graph_objects as go
 
 # To be able to call figure in st.pyplot()
-st.set_option('deprecation.showPyplotGlobalUse', False)
+#st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def page_make_colormaps():
     
