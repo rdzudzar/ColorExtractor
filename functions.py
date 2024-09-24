@@ -31,7 +31,7 @@ import io
 import plotly.graph_objects as go
     
 # To be able to call figure in st.pyplot()
-st.set_option('deprecation.showPyplotGlobalUse', False)
+#st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
 # Ignore worning for many openned plots
