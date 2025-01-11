@@ -60,7 +60,7 @@ def page_make_colormaps():
         
         
         # To be able to call figure in st.pyplot()
-        st.set_option('deprecation.showPyplotGlobalUse', False)
+        #st.set_option('deprecation.showPyplotGlobalUse', False)
         
         # Figure size appropriate to the size of the button
         fig, ax = plt.subplots(figsize=(7,1.32)) #7,1.4 loads faster
