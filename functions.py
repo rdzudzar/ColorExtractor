@@ -16,7 +16,7 @@ import numpy as np
 
 # Used colormap packages
 import cmasher as cmr
-import proplot as plot
+#import proplot as plot
 import cmcrameri as cmc
 import cmocean as cmo
 import colorcet as cc
