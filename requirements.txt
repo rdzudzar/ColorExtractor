@@ -2,7 +2,6 @@ streamlit == 1.37
 matplotlib >= 3.4.3
 numpy == 1.23.5
 cmasher >= 1.6.3
-proplot == 0.9.7
 cmcrameri >= 1.4
 cmocean >= 2.0
 colorcet >= 3.0.0
